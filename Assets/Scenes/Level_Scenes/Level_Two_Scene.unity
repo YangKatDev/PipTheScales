@@ -576,7 +576,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541775708}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -641,7 +641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d1351600780f0442b05a3ddf6bf15db, type: 2}
+  - {fileID: 2100000, guid: 651fa8c36a755354cbdd37f628384903, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -715,6 +715,7 @@ GameObject:
   - component: {fileID: 936594581}
   - component: {fileID: 936594580}
   - component: {fileID: 936594579}
+  - component: {fileID: 936594585}
   m_Layer: 0
   m_Name: Domino_Test
   m_TagString: Untagged
@@ -745,7 +746,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936594578}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -810,7 +811,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d1351600780f0442b05a3ddf6bf15db, type: 2}
+  - {fileID: 2100000, guid: 922c9a2dd8ede9545b34350f437c662c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -856,6 +857,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &936594585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936594578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819767d4f0363a641ba9267226aac6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MassMultiplierBehaviour
+  multiplier: 1.5
 --- !u!1 &1036563462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotationBehaviour
   target: {fileID: 4226817}
   rotSpeed: 2
-  distance: 10
+  distance: 20
+  minAngle: -45
+  maxAngle: 45
 --- !u!1 &1466817700
 GameObject:
   m_ObjectHideFlags: 0

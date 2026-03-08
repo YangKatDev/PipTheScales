@@ -1461,7 +1461,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotationBehaviour
   target: {fileID: 4226817}
   rotSpeed: 2
-  distance: 10
+  distance: 20
+  minAngle: -45
+  maxAngle: 45
 --- !u!1 &1466817700
 GameObject:
   m_ObjectHideFlags: 0
